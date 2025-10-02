@@ -11,7 +11,7 @@ spec:
     targetRevision: 3.0.6
     helm:
       valueFiles:
-        - https://raw.githubusercontent.com/mrmashy1980/IBM/main/helm_chart_values/b2bi/values.yaml
+        - https://raw.githubusercontent.com/mrmahy1980/IBM/main/helm_chart_values/b2bi/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: b2bi-integrator
