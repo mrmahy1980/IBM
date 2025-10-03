@@ -1255,7 +1255,7 @@ api: # ##### ADDED: Complete 'api' section with all required fields #####
       #     port: 8443
       #     endPort: 8450
 
-nameOverride: "b2bi"
+nameOverride:
 
 fullnameOverride: "b2bi"
 
