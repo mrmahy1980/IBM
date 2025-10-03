@@ -19,7 +19,7 @@ global:
   # If digest is specified, it takes precedence over tag
     # digest: sha256:3861a6b1de7dd77dfe3be1a9977b0c94d601a47c1cb8ee52352eb631fef8c425
     pullPolicy: IfNotPresent
-    pullSecret: ""
+    pullSecret: "docker-hub-secret"
   networkPolicies:
     ingress:
       enabled: false
@@ -179,7 +179,7 @@ dataSetup:
       # If digest is specified, it takes precedence over tag
     # digest: sha256:7e4422d1ccd469361b2e73d261e91b763f5d2c2acd77367046c63bc4687cb88c
     pullPolicy: IfNotPresent
-    pullSecret: ""
+    pullSecret: "docker-hub-secret"
     extraLabels: {}
 
 env:
@@ -1257,7 +1257,7 @@ api: # ##### ADDED: Complete 'api' section with all required fields #####
 
 nameOverride:
 
-fullnameOverride: "b2bi"
+fullnameOverride:
 
 # Test container
 test:
@@ -1275,7 +1275,7 @@ purge:
     tag: "6.2.0.5"
     #digest: sha256:8265a38f2dabc738b29967680a4d5f97dcf5b6c28a7c776715bf891079a37701
     pullPolicy: IfNotPresent
-    pullSecret: ""
+    pullSecret: "docker-hub-secret"
     extraLabels: {}
   # Provide a schedule for the purge job as a cron expression. For example "0 0 * * *" will run the purge job at 00:00 every day
   schedule: "0 * * * *"
@@ -1325,7 +1325,7 @@ documentService:
     pullPolicy: IfNotPresent
     tag: 1.0.0.4
     digest: sha256:a41198a68361514c67d833331c3403b597b233a28f9ee089133fcc32bed40d5d
-    pullSecret: ""
+    pullSecret: "docker-hub-secret"
   serviceAccount:
     name: default
   application:
